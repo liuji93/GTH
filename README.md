@@ -1,5 +1,5 @@
 Paper : Optimal Projection Guided Transfer Hashing for Image Retrieval<br />
-Author : JI Liu and Lei Zhang<br />
+Author : Ji Liu and Lei Zhang<br />
 Published in AAAI 2019<br />
 Contact : jiliu@cqu.edu.cn<br />
 
