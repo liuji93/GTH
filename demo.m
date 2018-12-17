@@ -20,8 +20,7 @@ paras.nbit     = r;
 paras.lambda1  = 0.1;
 paras.lambda2  = 1;
 paras.tao      = 0.1;
-paras.max_iter = 10;
-paras.in_iter  = 50;
+paras.max_iter = 5;
 [paras.nt,paras.d] = size(Xt_train_input);
 [paras.ns,paras.d] = size(Xs);
 
@@ -39,14 +38,13 @@ paras.nbit     = r;
 paras.lambda1  = 0.1;
 paras.lambda2  = 1;
 paras.tao      = 0.1;
-paras.max_iter = 10;
-paras.in_iter  = 50;
+paras.max_iter = 5;
 paras.median_c = 0.8;
 paras.beta_c   = 10;
 [paras.nt,paras.d] = size(Xt_train_input);
 [paras.ns,paras.d] = size(Xs);
 %% learning
-Wt      = T_Hashing(Xs,Xt_train_input,paras);
+Wt    = T_Hashing(Xs,Xt_train_input,paras);
 B_train = (Xt_train*Wt>0);
 B_test  = (Xt_test*Wt>0);        
 B_trn      = compactbit(B_train);
