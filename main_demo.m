@@ -27,7 +27,7 @@ param.r = loopnbits(1);
 %exp_data          = construct_dataset(0);
 
 %'GTH-g','GTH-h'
-hashmethods = {'GTH-g','GTH-h'};
+hashmethods = {'GTH-h'};
 nhmethods = length(hashmethods);
 
 for k = 1:runtimes
