@@ -23,7 +23,7 @@ clear I; clear eigvec;  clear eigval; clear data_t; clear mean_Xt;
 A = sign(2*rand(paras.nbit,paras.ns)-1);
 B = sign(2*rand(paras.nbit,paras.nt)-1);
 %%
-
+value =[];
 for iter = 1:paras.max_iter
     E          = (Wt-Ws);
     R          = rand(paras.d,paras.nbit);
@@ -52,10 +52,10 @@ for iter = 1:paras.max_iter
     %% update B
     B              = sign(Wt'*Xt);
     %B              = Wt'*Xt;
-  
+    value(iter)    = norm(Wt-Ws,'fro')+paras.lambda1*norm(B-Wt'*Xt,'fro')+paras.lambda2*norm(A-Ws'*Xs,'fro');
     
 end
-
+plot(value)
 B = (B>0);
 B = B';   % make sure nt x nbit
 end
