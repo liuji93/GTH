@@ -42,10 +42,10 @@ for iter = 1:paras.max_iter
     
     %% update B
     B              = sign(Wt'*Xt);
-    value(iter)    = norm(Wt-Ws,'fro')+paras.lambda1*norm(B-Wt'*Xt,'fro')+paras.lambda2*norm(A-Ws'*Xs,'fro');
+   
     
 end
-%plot(value)
+
 B = (B>0);
 B = B';   % make sure nt x nbit
 end
